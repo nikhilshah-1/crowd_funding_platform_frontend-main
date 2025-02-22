@@ -1,0 +1,203 @@
+.footer {
+  width: 100%;
+  background: #003366;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.left {
+  padding: 2% 10%;
+  text-align: left;
+}
+
+.logo {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.caption {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 13px;
+  padding: 8% 0 0 0;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.middle {
+  text-align: center;
+  padding: 3% 0;
+}
+
+.links {
+  padding: 4% 0;
+}
+
+.link {
+  font-size: 17px;
+  padding: 2% 3%;
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #b30d3a;
+  text-decoration: none;
+}
+
+.right {
+  text-align: right;
+  padding: 1% 4.5% 0% 0;
+}
+
+.names {
+  font-size: 15px;
+}
+
+.name {
+  color: white;
+  text-decoration: none;
+}
+
+.name:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.footerBottom {
+  padding: 0 3%;
+}
+
+.line {
+  background-color: rgb(192, 192, 192);
+}
+
+.copyrightText {
+  text-align: center;
+}
+
+/* Social media icons */
+.facebook,
+.linkedin {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 34px;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  margin-right: 12px;
+  border-radius: 100%;
+  transition: all 0.2s linear;
+  text-decoration: none;
+}
+
+.facebook:hover {
+  color: white;
+  background-color: #3b5998;
+}
+
+.linkedin:hover {
+  color: white;
+  background-color: #007bb6;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (min-width: 768px) and (max-width: 1070px) {
+  .footer {
+    padding: 2rem 0;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .left {
+    padding: 4% 10%;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .middle {
+    padding: 6% 0;
+  }
+
+  .right {
+    padding: 2% 0 0 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 326px) and (max-width: 479px) {
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .left {
+    text-align: center;
+    padding: 0;
+  }
+
+  .logo {
+    width: 20%;
+  }
+
+  .caption {
+    padding: 2% 0 0 0;
+    font-size: 13px;
+  }
+
+  .middle {
+    padding: 0;
+    text-align: center;
+  }
+
+  .right {
+    padding: 2% 0 0 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .left {
+    text-align: center;
+    padding: 0;
+  }
+
+  .logo {
+    width: 20%;
+  }
+
+  .caption {
+    padding: 2% 0 0 0;
+    font-size: 13px;
+  }
+
+  .middle {
+    padding: 0;
+    text-align: center;
+  }
+
+  .right {
+    padding: 2% 0 0 0;
+    text-align: center;
+  }
+}
+
+/* Adjustments for links on smaller screens */
+@media only screen and (max-width: 767px) {
+  .links {
+    padding: 2% 0% 2% 3%;
+  }
+}

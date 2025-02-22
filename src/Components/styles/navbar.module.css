@@ -1,0 +1,91 @@
+:root {
+  --scrolled: rgb(255, 255, 255);
+  --navbar-height: 70px;
+  --navbar-bg-color: rgb(202, 48, 48);
+  --navbar-text-color: white;
+  --navbar-hover-bg-color: rgba(255, 255, 255, 0.2);
+  --navbar-hover-text-color: #b30d3a;
+}
+
+.bodyPadding {
+  height: var(--navbar-height);
+  width: 100%;
+}
+
+.title {
+  height: var(--navbar-height);
+}
+
+.brand {
+  padding: 0;
+  height: var(--navbar-height);
+  width: 40%;
+}
+
+.brand img {
+  padding: 0;
+  margin: 0;
+  height: var(--navbar-height);
+}
+
+.navbar {
+  color: var(--navbar-text-color);
+  background-color: var(--navbar-bg-color);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  height: var(--navbar-height);
+}
+
+li a {
+  display: block;
+  color: inherit;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+li a:hover,
+li a:focus {
+  background-color: var(--navbar-hover-bg-color);
+  color: var(--navbar-hover-text-color);
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: inherit;
+}
+
+.notscrolled {
+  color: var(--navbar-text-color);
+}
+
+.scrolled {
+  background-color: var(--scrolled);
+  border-bottom-left-radius: 7% 10%;
+  border-bottom-right-radius: 7% 10%;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.36);
+  color: var(--navbar-hover-text-color);
+}

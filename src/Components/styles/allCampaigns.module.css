@@ -1,0 +1,92 @@
+.header {
+  text-align: center;
+  width: 76.5%;
+  padding: 2% 0 1% 0;
+  margin: 0 12%;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 40px;
+  font-weight: bolder;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(21, 215, 180, 1);
+}
+
+.section {
+  padding: 2% 10%;
+  margin: 0;
+}
+
+.campaign {
+  padding: 10px 50px;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1100px) {
+  .section {
+    padding: 2% 4%;
+  }
+
+  .campaign {
+    padding: 10px 18px;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  .section {
+    padding: 2% 4% 0 14%;
+  }
+
+  .campaign {
+    padding: 10px 18px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .section {
+    padding: 2% 4% 0 8%;
+  }
+
+  .campaign {
+    padding: 10px 18px;
+  }
+}
+
+/* Additional styles for better responsiveness and modern look */
+.campaign-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campaign-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.campaign-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.campaign-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.campaign-button {
+  background-color: #6200ea;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.campaign-button:hover {
+  background-color: #3700b3;
+  transform: scale(1.05);
+}
