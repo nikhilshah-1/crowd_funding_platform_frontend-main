@@ -137,7 +137,7 @@ npm start
 ---
 
 ## **👥 Contributors**  
-- **[Your Name](https://github.com/your-github-profile)** – *Project Lead & Developer*  
+- **[Nikhil Shah](https://github.com/nikhilshah-1)** – *Project Lead & Developer*  
 - **Other Contributors (If any)**  
 
 🙌 Want to contribute? **Fork this repo & submit a pull request!**  
