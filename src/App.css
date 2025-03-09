@@ -16,13 +16,15 @@ body {
   min-height: 100vh;
 }
 
+/* Main container */
 #page-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   flex: 1;
+  min-height: 100vh;
 }
 
+/* Content wrapper */
 #content-wrap {
   flex: 1;
   padding: 2rem;
@@ -32,6 +34,7 @@ body {
   margin: 1rem;
 }
 
+/* Header styles */
 header {
   background-color: #6200ea;
   color: #fff;
@@ -48,14 +51,16 @@ header h1 {
   font-size: 2rem;
 }
 
+/* Button styles */
 button {
   background-color: #6200ea;
   color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
 
 button:hover {
@@ -63,6 +68,7 @@ button:hover {
   transform: scale(1.05);
 }
 
+/* Card component */
 .card {
   background-color: #fff;
   border-radius: 8px;
@@ -79,6 +85,7 @@ button:hover {
   margin-bottom: 0;
 }
 
+/* Footer styles */
 footer {
   background-color: #333;
   color: #fff;
@@ -98,27 +105,31 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Media queries for responsiveness */
-@media only screen and (min-width: 768px) and (max-width: 1070px) {
+/* Responsive fixes */
+@media only screen and (max-width: 1070px) {
   #content-wrap {
-    padding-bottom: 23rem;
+    padding: 2rem;
+    margin: 1rem;
   }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   #content-wrap {
-    padding-bottom: 37.5rem;
+    padding: 1.5rem;
+    margin: 0.8rem;
   }
 }
 
-@media only screen and (min-width: 326px) and (max-width: 479px) {
+@media only screen and (max-width: 479px) {
   #content-wrap {
-    padding-bottom: 39rem;
+    padding: 1rem;
+    margin: 0.5rem;
   }
 }
 
 @media only screen and (max-width: 325px) {
   #content-wrap {
-    padding-bottom: 48rem;
+    padding: 0.8rem;
+    margin: 0.3rem;
   }
 }

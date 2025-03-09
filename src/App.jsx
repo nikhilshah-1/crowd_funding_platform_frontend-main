@@ -18,7 +18,7 @@ import Footer from "./Components/footer";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 
-// Custom hook for fetching data
+/* Custom Hook for Fetching Data */
 const useFetchData = (url) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -26,26 +26,22 @@ const useFetchData = (url) => {
   useEffect(() => {
     let isMounted = true;
 
-    fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        if (isMounted) {
-          setData(data);
-        }
-      })
-      .catch((error) => {
-        if (isMounted) {
-          setError(error);
-        }
-      });
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Network response was not ok");
+
+        const result = await response.json();
+        if (isMounted) setData(result);
+      } catch (err) {
+        if (isMounted) setError(err);
+      }
+    };
+
+    fetchData();
 
     return () => {
-      isMounted = false;
+      isMounted = false; // Cleanup to prevent state updates on unmounted components
     };
   }, [url]);
 
@@ -53,7 +49,7 @@ const useFetchData = (url) => {
 };
 
 const App = () => {
-  // Example usage of the custom hook
+  // Example API Fetch Usage
   const { data, error } = useFetchData("https://api.example.com/data");
 
   useEffect(() => {
@@ -61,7 +57,7 @@ const App = () => {
       console.log("Running...");
     }, 1000);
 
-    return () => clearInterval(interval); // Proper cleanup
+    return () => clearInterval(interval); // Cleanup interval properly
   }, []);
 
   return (
@@ -86,8 +82,8 @@ const App = () => {
         </Switch>
 
         {/* Display fetched data or error */}
-        {error && <div>Error: {error.message}</div>}
-        {data && <div>{data.name}</div>}
+        {error && <div style={{ color: "red" }}>Error: {error.message}</div>}
+        {data && <div>Data Loaded: {data.name}</div>}
       </div>
       <Footer />
     </div>

@@ -7,30 +7,14 @@ const NavBar = () => {
 
   useEffect(() => {
     const changeColor = () => {
-      var scrolled = window.scrollY;
-      if (scrolled >= 80) {
-        if (navBackground !== styles.scrolled) {
-          setNavBackground(styles.scrolled);
-        }
-      } else {
-        if (navBackground !== styles.notscrolled) {
-          setNavBackground(styles.notscrolled);
-        }
-      }
-      return null;
+      setNavBackground(window.scrollY >= 80 ? styles.scrolled : styles.notscrolled);
     };
 
     window.addEventListener("scroll", changeColor);
-    return () => {
-      window.removeEventListener("scroll", changeColor);
-    };
-  });
+    return () => window.removeEventListener("scroll", changeColor);
+  }, []); // Added empty dependency array for optimization
 
-  return (
-    <React.Fragment>
-      <Navbar navBackground={navBackground} />
-    </React.Fragment>
-  );
+  return <Navbar navBackground={navBackground} />;
 };
 
 export default NavBar;
